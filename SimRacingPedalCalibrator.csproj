@@ -1,14 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
-    <TargetPlatformVersion>10.0.19041.0</TargetPlatformVersion>
+    <TargetFramework>net8.0-windows10.0.19041</TargetFramework>
     <RootNamespace>SimRacingPedalCalibrator</RootNamespace>
     <AssemblyName>SimRacingPedalCalibrator</AssemblyName>
     <UseWinUI>true</UseWinUI>
-    <RuntimeIdentifiers>win-x64;win-x86;win-arm64</RuntimeIdentifiers>
-    <PublishProfile>win-$(Platform)</PublishProfile>
-    <UseWindowsUIFileType>true</UseWindowsUIFileType>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
   </PropertyGroup>
@@ -16,16 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.240802001" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1" />
-    <PackageReference Include="CommunityToolkit.WinUI" Version="7.1.2" />
-    <PackageReference Include="LiveChartsCore.SkiaSharpView.WinUI" Version="2.0.0-rc2" />
     <PackageReference Include="SharpDX" Version="4.2.0" />
     <PackageReference Include="SharpDX.DirectInput" Version="4.2.0" />
-  </ItemGroup>
-
-  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">
-    <PackageReference Include="Microsoft.Windows.SDK.NET.Ref" Version="10.0.26100.1" />
-    <PackageReference Include="Microsoft.WindowsAppSDK.Runtime.win-x64" Version="1.4.240802001" Condition="$(RuntimeIdentifier.StartsWith('win-x64'))" />
-    <PackageReference Include="Microsoft.WindowsAppSDK.Runtime.win-x86" Version="1.4.240802001" Condition="$(RuntimeIdentifier.StartsWith('win-x86'))" />
-    <PackageReference Include="Microsoft.WindowsAppSDK.Runtime.win-arm64" Version="1.4.240802001" Condition="$(RuntimeIdentifier.StartsWith('win-arm64'))" />
   </ItemGroup>
 </Project>
