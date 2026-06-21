@@ -7,11 +7,11 @@
     <UseWinUI>true</UseWinUI>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
+    <SelfContained>false</SelfContained>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.240802001" />
-    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1" />
     <PackageReference Include="SharpDX" Version="4.2.0" />
     <PackageReference Include="SharpDX.DirectInput" Version="4.2.0" />
   </ItemGroup>
